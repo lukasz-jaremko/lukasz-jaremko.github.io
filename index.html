@@ -187,15 +187,11 @@
 
     .placeholder strong {
       display: block;
-      color: var(--green-dark);
-      font-size: 14px;
-    }
-
-    .placeholder span {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: 12px;
+      color: #819087;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     section {
@@ -234,6 +230,29 @@
 
     .copy {
       color: var(--muted);
+    }
+
+    .methods-strip {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .methods-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    .methods-line {
+      color: var(--green-dark);
+      font-size: 13.5px;
+      font-weight: 500;
+      line-height: 1.65;
     }
 
     .cards {
@@ -498,7 +517,8 @@
             <p class="lead">
               I investigate how biomolecules work, change in disease and respond to chemical intervention.
               I combine structural biology, NMR, biophysics, chemical biology, metabolomics and computation
-              to reveal mechanisms, assess tractability and guide drug-discovery, diagnostic and technology decisions.
+              to reveal mechanisms, assess tractability and guide drug-discovery, diagnostic-development
+              and technology decisions.
             </p>
 
             <div class="actions">
@@ -509,18 +529,12 @@
           </div>
 
           <div class="visuals">
-            <div class="placeholder">
-              <div>
-                <strong>Portrait</strong>
-                <span>Reserved for your photo.</span>
-              </div>
+            <div class="placeholder photo-slot" aria-label="Portrait area">
+              <div><strong>Portrait</strong></div>
             </div>
 
-            <div class="placeholder scheme">
-              <div>
-                <strong>Molecular scheme</strong>
-                <span>Reserved for protein–ligand graphic and mechanism / action scheme.</span>
-              </div>
+            <div class="placeholder scheme" aria-label="Molecular scheme area">
+              <div><strong>Molecular scheme</strong></div>
             </div>
           </div>
 
@@ -531,7 +545,7 @@
         <div class="wrap split">
           <div>
             <p class="kicker">Profile</p>
-            <h2>Deep molecular science with a discovery mindset.</h2>
+            <h2>Molecular mechanisms, dynamics and discovery.</h2>
           </div>
 
           <div class="copy">
@@ -543,12 +557,16 @@
             </p>
 
             <p>
-              I combine X-ray crystallography, NMR spectroscopy, cryo-electron microscopy (cryo-EM),
-              AI-supported structural modelling, biophysical chemistry, chemical biology, metabolomics and
-              computation to characterize molecular structure, dynamics and interactions, track and identify
-              small molecules, and analyze complex molecular systems. The goal is practical: understand mechanism,
-              discover and design ligands, evaluate what is experimentally supported and determine what should be tested next.
+              I use structural, spectroscopic, biophysical, chemical and computational approaches to characterize
+              molecular structure, dynamics and interactions, track and identify small molecules, and analyze
+              complex molecular systems. The goal is practical: understand mechanism, discover and design ligands,
+              evaluate what is experimentally supported and determine what should be tested next.
             </p>
+
+            <div class="methods-strip" aria-label="Core methods">
+              <span class="methods-label">Methods</span>
+              <span class="methods-line">NMR spectroscopy · X-ray crystallography · cryo-electron microscopy (cryo-EM) · AI-supported structural modelling · biophysical chemistry · chemical biology</span>
+            </div>
           </div>
         </div>
       </section>
@@ -564,16 +582,16 @@
               <h3>Cancer &amp; epigenetic therapeutics</h3>
               <p>
                 Disease-driving mechanisms, chromatin regulators and molecular recognition in cancer,
-                with selective chemical modulation to generate probes, validate targets and advance
-                epigenetic drug-discovery opportunities.
+                with selective chemical modulation to generate chemical probes, validate targets and
+                inform epigenetic drug discovery.
               </p>
             </article>
 
             <article class="card">
               <h3>Difficult targets &amp; cryptic binding sites</h3>
               <p>
-                Structural dynamics and biophysics to reveal cryptic binding sites, validate tractability
-                and expand the druggable target space for chemical-probe and drug-candidate discovery.
+                Structural dynamics and biophysics to reveal cryptic binding sites, assess tractability
+                and identify new opportunities for chemical-probe and drug-candidate discovery.
               </p>
             </article>
 
@@ -581,8 +599,8 @@
               <h3>Protein dynamics &amp; aggregation</h3>
               <p>
                 Flexible proteins, intrinsically disordered systems and oligomeric states—including
-                tau and α-synuclein—with emphasis on mechanism, inhibitors, fluorescent probes and
-                molecular intervention in neurodegeneration.
+                tau and α-synuclein—with emphasis on mechanism and applications toward inhibitor
+                and fluorescent-probe development in neurodegenerative disease.
               </p>
             </article>
 
@@ -606,11 +624,11 @@
             </article>
 
             <article class="card">
-              <h3>Scientific technology development</h3>
+              <h3>Methods &amp; technology development</h3>
               <p>
-                Developing and integrating spectroscopic, analytical and computational approaches that
-                improve how molecular systems are measured, interpreted and translated into discovery,
-                diagnostic and technology applications.
+                Developing and integrating spectroscopic, analytical and computational methods that
+                improve how molecular systems are measured, interpreted and applied in discovery,
+                diagnostics and biotechnology.
               </p>
             </article>
 
@@ -629,8 +647,8 @@
 
             <div class="copy">
               <p>
-                My approach is evidence-driven: define the mechanism, test the assumptions, identify
-                scientific risk and determine which experiment or analysis will change the decision.
+                I focus on defining the mechanism, examining key assumptions, identifying scientific risk
+                and determining which experiment or analysis would most reduce uncertainty.
               </p>
               <p>
                 I have also worked with companies on scientific analysis, feasibility, applicability and
@@ -652,8 +670,8 @@
             <article class="assessment-card">
               <h3>Scientific &amp; technical assessment</h3>
               <p>
-                Critical review of data quality, reproducibility, claims, hidden assumptions and scientific
-                risk, including support for technical due diligence, feasibility and applicability assessment.
+                Review of data quality, reproducibility, claims, key assumptions and scientific risk,
+                including technical due-diligence support and assessment of feasibility and applicability.
               </p>
             </article>
 
@@ -678,7 +696,7 @@
           <div class="audiences">
             <span>Biotechnology &amp; pharma</span>
             <span>Life-science consulting</span>
-            <span>Investment &amp; due diligence</span>
+            <span>Scientific due-diligence support</span>
             <span>Academic &amp; translational institutes</span>
             <span>Technology developers</span>
           </div>
@@ -706,7 +724,7 @@
             </div>
 
             <div class="facts">
-              <div class="fact"><strong>&gt;$7M</strong><span>competitive research funding secured across programs since 2019</span></div>
+              <div class="fact"><strong>&gt;$7M</strong><span>competitive funding supporting research programs since 2019</span></div>
               <div class="fact"><strong>Since 2017</strong><span>independent research leadership</span></div>
               <div class="fact"><strong>100+</strong><span>scientific publications</span></div>
               <div class="fact"><strong>30+</strong><span>researchers and trainees mentored</span></div>
@@ -746,7 +764,7 @@
             <p class="kicker">Contact</p>
             <h2>Research leadership, discovery and scientific assessment.</h2>
             <p class="copy">
-              Academic leadership, biotech and pharma, scientific assessment and due-diligence support,
+              Academic leadership, biotech and pharma, scientific assessment, due-diligence support,
               technology evaluation, drug discovery and interdisciplinary collaboration.
             </p>
           </div>
