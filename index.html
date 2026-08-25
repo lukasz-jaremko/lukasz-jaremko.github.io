@@ -9,17 +9,24 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://lukaszjaremko.com/">
   <meta name="theme-color" content="#2f4f43">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23fbfcfa%22%2F%3E%0A%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20font-size%3D%2231%22%20font-weight%3D%22700%22%20fill%3D%22%232f4f43%22%3ELJ%3C%2Ftext%3E%0A%3C%2Fsvg%3E" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://lukaszjaremko.com/">
   <meta property="og:title" content="Lukasz Jaremko, PhD">
   <meta property="og:description" content="Structural and chemical biology · Drug discovery · Scientific assessment">
   <meta property="og:site_name" content="Lukasz Jaremko">
+  <meta property="og:image" content="https://lukaszjaremko.com/assets/lukasz-jaremko-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portrait photograph">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lukasz Jaremko, PhD">
   <meta name="twitter:description" content="Structural and chemical biology · Drug discovery · Scientific assessment">
+  <meta name="twitter:image" content="https://lukaszjaremko.com/assets/lukasz-jaremko-og.jpg">
+  <meta name="twitter:image:alt" content="Portrait photograph">
 
   <script type="application/ld+json">
 {
@@ -28,6 +35,7 @@
   "name": "Lukasz Jaremko",
   "honorificSuffix": "PhD",
   "url": "https://lukaszjaremko.com/",
+  "image": "https://lukaszjaremko.com/assets/lukasz-jaremko-og.jpg",
   "email": "mailto:contact@lukaszjaremko.com",
   "jobTitle": "Structural and Chemical Biologist",
   "description": "Structural and chemical biology · Drug discovery · Scientific assessment",
@@ -217,6 +225,27 @@
     .visuals {
       display: grid;
       gap: 14px;
+    }
+
+    .portrait-card {
+      margin: 0;
+      border: 1px solid #c7d2cb;
+      background: var(--white);
+      overflow: hidden;
+      box-shadow: 0 18px 38px rgba(34, 58, 49, .10);
+    }
+
+    .portrait-card picture {
+      display: block;
+    }
+
+    .portrait-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center center;
     }
 
     .placeholder {
@@ -465,6 +494,11 @@
     }
 
     @media (max-width: 650px) {
+
+      .portrait-card {
+        width: min(100%, 430px);
+        margin: 0 auto;
+      }
       .page {
         width: calc(100% - 12px);
         margin: 6px auto;
@@ -560,9 +594,19 @@
           </div>
 
           <div class="visuals">
-            <div class="placeholder photo-slot" aria-label="Portrait area">
-              <div><strong>Portrait</strong></div>
-            </div>
+            <figure class="portrait-card">
+              <picture>
+                <source srcset="assets/lukasz-jaremko-portrait.webp" type="image/webp">
+                <img
+                  src="assets/lukasz-jaremko-portrait.jpg"
+                  alt="Portrait photograph"
+                  width="760"
+                  height="950"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high">
+              </picture>
+            </figure>
             <div class="placeholder scheme" aria-label="Molecular scheme area">
               <div><strong>Molecular scheme</strong></div>
             </div>
