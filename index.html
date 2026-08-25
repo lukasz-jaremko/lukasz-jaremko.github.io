@@ -416,6 +416,64 @@
       font-size: 13px;
     }
 
+    .contributions {
+      margin-top: 30px;
+    }
+
+    .contributions-title {
+      margin: 0 0 14px;
+      color: var(--green-dark);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .contribution-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .contribution {
+      display: block;
+      min-height: 150px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      text-decoration: none;
+      transition: transform .16s ease, border-color .16s ease;
+    }
+
+    .contribution:hover {
+      transform: translateY(-2px);
+      border-color: #aebdb3;
+    }
+
+    .contribution-meta {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .contribution strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .contribution span:last-child {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
     .links {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -526,7 +584,8 @@
       }
       .cards,
       .assessment-grid,
-      .links {
+      .links,
+      .contribution-grid {
         grid-template-columns: 1fr;
       }
 
@@ -581,10 +640,10 @@
               Structural &amp; chemical biology · Drug discovery · NMR &amp; biophysics · Scientific assessment
             </p>
             <p class="lead">
-              I investigate how biomolecules work, change in disease and respond to chemical intervention.
-              I combine structural biology, NMR, biophysics, chemical biology, metabolomics and computation
-              to reveal mechanisms, assess tractability and guide drug-discovery, diagnostic-development
-              and technology decisions.
+              I investigate how molecular structure, dynamics and interactions shape disease mechanisms
+              and responses to chemical intervention. I integrate structural biology, NMR, biophysics,
+              chemical biology, analytical workflows and computation to define mechanism, assess tractability
+              and guide experimentally grounded discovery and technology decisions.
             </p>
             <div class="actions">
               <a class="button" href="#focus">Scientific expertise</a>
@@ -623,20 +682,18 @@
           </div>
           <div class="copy">
             <p>
-              My research focuses on the fundamental molecular machinery of life—proteins and nucleic acids—
-              how they function, interact with small molecules and change in disease. I work especially on
-              difficult molecular systems where dynamics, transient interactions, hidden binding sites and
-              heterogeneous states determine function and druggability.
+              My research examines how proteins and nucleic acids function, interact with small molecules
+              and change in disease. I focus on difficult systems in which conformational dynamics, transient
+              interactions, hidden binding sites and heterogeneous states govern molecular function and druggability.
             </p>
             <p>
-              I use structural, spectroscopic, biophysical, chemical and computational approaches to characterize
-              molecular structure, dynamics and interactions, track and identify small molecules, and analyze
-              complex molecular systems. The goal is practical: understand mechanism, discover and design ligands,
-              evaluate what is experimentally supported and determine what should be tested next.
+              By integrating structural, spectroscopic, biophysical, chemical and computational approaches,
+              I define molecular mechanisms, characterize ligand interactions and identify the experiments most
+              likely to reduce uncertainty.
             </p>
             <div class="methods-strip" aria-label="Core methods">
               <span class="methods-label">Methods</span>
-              <span class="methods-line">NMR spectroscopy · X-ray crystallography · cryo-electron microscopy (cryo-EM) · AI-supported structural modelling · biophysical chemistry · chemical biology</span>
+              <span class="methods-line">NMR spectroscopy · X-ray crystallography · cryo-electron microscopy (cryo-EM) · biophysical chemistry · chemical biology · computational structural modelling</span>
             </div>
           </div>
         </div>
@@ -673,17 +730,17 @@
             <article class="card">
               <h3>Structural methods &amp; molecular analysis</h3>
               <p>
-                NMR spectroscopy, X-ray crystallography, cryo-EM, complementary biophysics and AI-supported
-                structural modelling for molecular structure, dynamics and ligand binding, together with
-                metabolomics and computational methods to detect, track and identify small molecules and
-                their interactions in complex biological systems.
+                NMR spectroscopy, X-ray crystallography, cryo-EM, complementary biophysics, and computational
+                structural modelling to define molecular structure, conformational dynamics, interaction mechanisms
+                and ligand binding. Metabolomics and complementary analytical workflows support detection, tracking
+                and identification of small molecules in complex biological systems.
               </p>
             </article>
             <article class="card">
               <h3>Integrated drug discovery</h3>
               <p>
                 Target validation, assay strategy, screening, structural and biophysical evidence,
-                ligand characterization and experimental de-risking—from mechanism to chemical probes
+                ligand characterization and experimental prioritization—from mechanism to chemical probes
                 and drug-candidate decisions.
               </p>
             </article>
@@ -700,6 +757,81 @@
         </div>
       </section>
 
+      <section id="record" class="tint">
+        <div class="wrap">
+          <h2>Selected Scientific Record</h2>
+
+          <div class="contributions">
+            <div class="contribution-grid">
+
+              <a class="contribution" href="https://pubmed.ncbi.nlm.nih.gov/40770093/" target="_blank" rel="noopener noreferrer">
+                <span class="contribution-meta">Nature · 2026</span>
+                <strong>NSD2 inhibitors rewire chromatin to treat lung and pancreatic cancers</strong>
+                <span>Atomic-level structural and biochemical analysis of clinical-grade NSD2 inhibitors defined molecular recognition at the catalytic SAM-binding site and connected direct enzyme engagement with chromatin reprogramming and therapeutic response.</span>
+              </a>
+
+              <a class="contribution" href="https://pubmed.ncbi.nlm.nih.gov/41519995/" target="_blank" rel="noopener noreferrer">
+                <span class="contribution-meta">Natural Products and Bioprospecting · 2026</span>
+                <strong>Enhancing detection of low-abundance metabolites in proton NMR through band-selective suppression and presaturation</strong>
+                <span>NMR pulse-sequence development increased visibility of low-abundance molecular species in complex mixtures, improving metabolite detection, chemical discrimination and quantitative molecular profiling.</span>
+              </a>
+
+              <a class="contribution" href="https://pubmed.ncbi.nlm.nih.gov/39824781/" target="_blank" rel="noopener noreferrer">
+                <span class="contribution-meta">Expert Review of Proteomics · 2025 · Expert opinion</span>
+                <strong>AlphaFold and what is next: bridging functional, systems and structural biology</strong>
+                <span>Invited expert perspective on AI-driven structural modelling: where predicted atomic structures are powerful, and where experimental information on conformational dynamics, molecular interactions, ligands and biological context remains essential.</span>
+              </a>
+
+              <a class="contribution" href="https://pubmed.ncbi.nlm.nih.gov/39217275/" target="_blank" rel="noopener noreferrer">
+                <span class="contribution-meta">Journal of Biomolecular NMR · 2025</span>
+                <strong>Pitfalls in measurements of R1 relaxation rates of protein backbone 15N nuclei</strong>
+                <span>Methodological analysis of backbone 15N relaxation identified systematic sources of error and defined experimental conditions for more accurate residue-specific measurements of protein motion at atomic resolution.</span>
+              </a>
+
+              <a class="contribution" href="https://pubmed.ncbi.nlm.nih.gov/37527654/" target="_blank" rel="noopener noreferrer">
+                <span class="contribution-meta">Structure · 2023</span>
+                <strong>MRG15 activates histone methyltransferase activity of ASH1L by recruiting it to the nucleosomes</strong>
+                <span>Molecular mechanism of enzyme activation: structural and biochemical evidence showed that MRG15 enhances ASH1L activity by recruiting the methyltransferase to nucleosomes rather than by directly releasing catalytic autoinhibition.</span>
+              </a>
+
+              <a class="contribution" href="https://pubmed.ncbi.nlm.nih.gov/36384931/" target="_blank" rel="noopener noreferrer">
+                <span class="contribution-meta">Nature Communications · 2022</span>
+                <strong>Increased slow dynamics defines ligandability of BTB domains</strong>
+                <span>Residue-level NMR dynamics linked microsecond-to-millisecond conformational motion with fragment binding and cryptic ligandable states, providing a molecular basis for the druggability of difficult protein targets.</span>
+              </a>
+
+              <a class="contribution" href="https://pubmed.ncbi.nlm.nih.gov/33536620/" target="_blank" rel="noopener noreferrer">
+                <span class="contribution-meta">Nature · 2021</span>
+                <strong>Elevated NSD3 histone methylation activity drives squamous cell lung cancer</strong>
+                <span>Structural and biochemical analysis connected oncogenic NSD3 hyperactivity with altered histone methylation and tumor dependency, establishing the enzyme as a molecularly validated therapeutic target.</span>
+              </a>
+
+              <a class="contribution" href="https://pubmed.ncbi.nlm.nih.gov/32918646/" target="_blank" rel="noopener noreferrer">
+                <span class="contribution-meta">Journal of Biomolecular NMR · 2020</span>
+                <strong>Dynamic 15N{1H} NOE measurements: a tool for studying protein dynamics</strong>
+                <span>Method development for sensitive detection of fast picosecond protein-backbone motion, enabling more accurate residue-level NOE measurements and improved identification of highly mobile molecular regions.</span>
+              </a>
+
+            </div>
+          </div>
+
+          <div class="links">
+            <a href="https://scholar.google.com/citations?user=3slHW_8AAAAJ" target="_blank" rel="noopener noreferrer">
+              <strong>Google Scholar</strong>
+              <span>Publications and citation record</span>
+            </a>
+            <a href="https://orcid.org/0000-0001-7684-9359" target="_blank" rel="noopener noreferrer">
+              <strong>ORCID</strong>
+              <span>Researcher identifier and record</span>
+            </a>
+
+            <a href="mailto:contact@lukaszjaremko.com?subject=CV%20request">
+              <strong>Curriculum vitae</strong>
+              <span>Full CV available on request</span>
+            </a>
+          </div>
+        </div>
+      </section>
       <section id="assessment">
         <div class="wrap">
           <div class="assessment-head">
@@ -715,6 +847,10 @@
               <p>
                 I have also worked with companies on scientific analysis, feasibility, applicability and
                 the practical limits of proposed technologies and research directions.
+              </p>
+              <p>
+                Independent scientific assessment may include evidence review, mechanism and tractability analysis,
+                experimental prioritization, feasibility assessment, and evaluation of the strength and limits of scientific claims.
               </p>
             </div>
           </div>
@@ -767,14 +903,18 @@
           <div class="lead-grid">
             <div>
               <p>
-                Since 2017, I have led independent research programs and teams, recruited and mentored
-                scientists, built collaborations and developed capabilities spanning structural biology,
-                NMR, biophysics, proteomics, metabolomics and drug discovery.
+                Since 2017, I have led independent research programs and teams; recruited and mentored
+                scientists; contributed to faculty recruitment and institutional research development;
+                and built capabilities spanning structural biology, NMR, biophysics, proteomics,
+                metabolomics and drug discovery.
               </p>
               <p>
-                I build and sustain collaborations across universities, research institutes, hospitals
-                and industry, combining scientific depth with clear prioritization, rigorous evidence
-                and practical execution.
+                I have organized and co-organized international scientific conferences and seminar series
+                in structural biology and drug discovery, bringing together invited leaders from academia
+                and industry. My scientific service includes editorial roles, peer review for international
+                journals, and expert evaluation of research proposals for international funding agencies.
+                I build collaborations across universities, research institutes, hospitals and industry
+                through scientific rigor, clear prioritization and practical execution.
               </p>
             </div>
             <div class="facts">
@@ -786,28 +926,6 @@
           </div>
         </div>
       </section>
-      <section id="record" class="tint">
-        <div class="wrap">
-          <p class="kicker">Scientific record</p>
-          <h2>Research output and professional profile.</h2>
-
-          <div class="links">
-            <a href="https://scholar.google.com/citations?user=3slHW_8AAAAJ" target="_blank" rel="noopener noreferrer">
-              <strong>Google Scholar</strong>
-              <span>Publications and citation record</span>
-            </a>
-            <a href="https://orcid.org/0000-0001-7684-9359" target="_blank" rel="noopener noreferrer">
-              <strong>ORCID</strong>
-              <span>Researcher identifier and record</span>
-            </a>
-
-            <a href="mailto:contact@lukaszjaremko.com?subject=CV%20request">
-              <strong>Curriculum vitae</strong>
-              <span>Full CV available on request</span>
-            </a>
-          </div>
-        </div>
-      </section>
       <section id="contact">
         <div class="wrap contact-grid">
 
@@ -815,14 +933,17 @@
             <p class="kicker">Contact</p>
             <h2>Research leadership, discovery and scientific assessment.</h2>
             <p class="copy">
-              Academic leadership, biotech and pharma, scientific assessment, due-diligence support,
-              technology evaluation, drug discovery and interdisciplinary collaboration.
+              Research leadership · Faculty opportunities · Scientific assessment · Technology evaluation ·
+              Drug discovery · Interdisciplinary collaboration
             </p>
           </div>
           <div class="contact-box">
             <p class="kicker">Direct contact</p>
             <a class="contact-email" href="mailto:contact@lukaszjaremko.com">contact@lukaszjaremko.com</a>
-            <p class="copy">Research / faculty opportunities · Scientific assessment · Technology evaluation</p>
+            <p class="copy">
+              I welcome inquiries regarding research collaborations, academic leadership opportunities, scientific assessment,
+              technology evaluation, drug-discovery strategy, and interdisciplinary collaboration.
+            </p>
           </div>
 
         </div>
@@ -832,8 +953,8 @@
     <footer>
       <div class="wrap footer-grid">
         <span>© 2026 Lukasz Jaremko</span>
-        <span>Structural &amp; chemical biology · Drug discovery · NMR &amp; biophysics · Scientific assessment</span>
-        <a href="#top">Back to top ↑</a>
+        <span>Structural &amp; chemical biology · Drug discovery · NMR, biophysics &amp; structural biology · Scientific assessment</span>
+        <a href="#top">Back to top</a>
       </div>
     </footer>
 
