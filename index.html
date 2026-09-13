@@ -229,11 +229,6 @@
       font-weight: 600;
     }
 
-    .visuals {
-      display: grid;
-      gap: 14px;
-    }
-
     .portrait-card {
       margin: 0;
       border: 1px solid #c7d2cb;
@@ -497,6 +492,63 @@
     }
 
 
+
+    /* Visual thesis immediately follows the hero; source panel PNGs remain unchanged. */
+    .visual-thesis {
+      padding: 34px 0 36px;
+      background: var(--white);
+    }
+
+    .visual-thesis .approach-panels-wrap {
+      margin-top: 0;
+    }
+
+    .research-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .technology-block {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .technology-title {
+      margin: 0 0 14px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    .technology-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .technology-card {
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+    }
+
+    .technology-card h3 {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .technology-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
     /* Four-panel scientific approach: source PNGs are displayed unchanged. */
     .approach-panels-wrap {
       margin-top: 34px;
@@ -584,6 +636,8 @@
       .hero { padding: 50px 0; }
       section { padding: 52px 0; }
       .cards,
+      .research-cards,
+      .technology-grid,
       .links { grid-template-columns: 1fr; }
       .footer-grid { flex-direction: column; }
       h1 { font-size: 40px; }
@@ -633,53 +687,23 @@
             </div>
           </div>
 
-          <div class="visuals">
-            <figure class="portrait-card">
-              <picture>
-                <source srcset="assets/lukasz-jaremko-portrait.webp" type="image/webp">
-                <img
-                  src="assets/lukasz-jaremko-portrait.jpg"
-                  alt="Portrait photograph"
-                  width="760"
-                  height="950"
-                  loading="eager"
-                  decoding="async"
-                  fetchpriority="high">
-              </picture>
-            </figure>
-          </div>
+          <figure class="portrait-card">
+            <picture>
+              <source srcset="assets/lukasz-jaremko-portrait.webp" type="image/webp">
+              <img
+                src="assets/lukasz-jaremko-portrait.jpg"
+                alt="Portrait photograph"
+                width="760"
+                height="950"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high">
+            </picture>
+          </figure>
         </div>
       </section>
 
-      <section id="profile">
-        <div class="wrap split">
-          <div>
-            <p class="kicker">Approach</p>
-            <h2>The states that govern molecular function and ligand response.</h2>
-          </div>
-          <div class="copy">
-            <p>
-              AI-based structure prediction, cryo-electron microscopy (cryo-EM) and crystallography now provide structural models for far more proteins and
-              assemblies than before. The next questions are dynamic: which states are populated in solution, how they interconvert,
-              how interactions, mutations and post-translational modifications reshape them, and how ligands alter function.
-              NMR is central because it measures these processes directly, including transient, low-population and structurally
-              heterogeneous states and cryptic binding sites that static models cannot fully describe.
-            </p>
-            <p>
-              These questions span enzyme regulation and inhibition, chromatin, transient protein interactions, intrinsically
-              disordered proteins and regions, and proteins moving between monomeric, oligomeric, phase-separated, assembled and
-              aggregated states. Integrated with X-ray crystallography, cryo-EM, quantitative solution biophysics, biochemical
-              validation and computational models, these measurements connect structural models with regulation, mechanism and ligand response. I also develop NMR
-              methods that improve access to weak, transient and low-population states. These capabilities support fragment screening,
-              chemical-probe optimization and drug-candidate development, and extend to metabolomics, natural products and complex mixtures.
-            </p>
-            <div class="methods-strip" aria-label="Core methods">
-              <span class="methods-label">Core approaches</span>
-              <span class="methods-line">Biomolecular NMR · X-ray crystallography · cryo-electron microscopy · quantitative solution biophysics · biochemical and cellular validation · computational structural biology</span>
-            </div>
-          </div>
-        </div>
-
+      <section class="visual-thesis" aria-label="Scientific approach">
         <div class="wrap approach-panels-wrap">
           <div class="approach-panels" aria-label="Scientific approach illustrated in four molecular panels">
             <figure class="approach-panel">
@@ -698,11 +722,29 @@
         </div>
       </section>
 
+      <section id="profile">
+        <div class="wrap split">
+          <div>
+            <p class="kicker">Approach</p>
+            <h2>The states that govern molecular function and ligand response.</h2>
+          </div>
+          <div class="copy">
+            <p>
+              AI-based structure prediction, cryo-electron microscopy (cryo-EM) and crystallography increasingly provide detailed molecular structures. My work asks what those structures do in solution: which states are populated, how they interconvert and recognize partners, how mutations and post-translational modifications reshape them, and how ligands alter function. Nuclear magnetic resonance (NMR) spectroscopy is central because it can directly quantify transient, low-population and heterogeneous states and reveal binding sites that static structures may miss. I integrate these measurements with X-ray crystallography, cryo-EM, quantitative solution biophysics, biochemical and cellular validation, and computational structural biology to connect molecular architecture with mechanism and chemical intervention.
+            </p>
+            <div class="methods-strip" aria-label="Core methods">
+              <span class="methods-label">Core approaches</span>
+              <span class="methods-line">Biomolecular NMR · X-ray crystallography · cryo-electron microscopy · quantitative solution biophysics · biochemical and cellular validation · computational structural biology</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="research" class="tint">
         <div class="wrap">
           <p class="kicker">Research</p>
           <h2>From molecular mechanism to chemical intervention.</h2>
-          <div class="cards">
+          <div class="research-cards">
             <article class="card">
               <h3>Chromatin regulation &amp; transcriptional control</h3>
               <p>
@@ -730,20 +772,25 @@
                 I identify and validate ligandable states, map actionable molecular pockets, define how ligands, including inhibitors, modulate molecular function, and use screening and structure-guided design to develop chemical probes and advance promising compounds toward therapeutic application.
               </p>
             </article>
+          </div>
 
-            <article class="card">
-              <h3>NMR relaxation &amp; enhanced detection</h3>
-              <p>
-                I develop and apply NMR relaxation experiments and analysis to improve the accuracy and sensitivity of protein dynamics measurements and extract quantitative parameters of molecular motion. I also apply protonless NMR, including low-γ direct ¹³C- and ¹⁵N-detection, particularly for intrinsically disordered proteins (IDPs) and intrinsically disordered regions (IDRs), to overcome spectral signal overlap and limitations associated with exchangeable protons in conventional ¹H-detected NMR.
-              </p>
-            </article>
+          <div class="technology-block">
+            <h3 class="technology-title">Methods &amp; technology development</h3>
+            <div class="technology-grid">
+              <article class="technology-card">
+                <h3>NMR relaxation &amp; enhanced detection</h3>
+                <p>
+                  I develop and apply NMR relaxation experiments and analysis to improve the accuracy and sensitivity of protein dynamics measurements and extract quantitative parameters of molecular motion. I also apply protonless NMR, including low-γ direct ¹³C- and ¹⁵N-detection, particularly for intrinsically disordered proteins (IDPs) and intrinsically disordered regions (IDRs), to overcome spectral signal overlap and limitations associated with exchangeable protons in conventional ¹H-detected NMR.
+                </p>
+              </article>
 
-            <article class="card">
-              <h3>Natural products &amp; metabolomics</h3>
-              <p>
-                I develop and apply NMR methods that shorten measurement times, increase sensitivity, resolve spectral overlap and enhance the detection of low-abundance metabolites, enabling their de novo identification or confirmation in complex biological mixtures and natural-product samples.
-              </p>
-            </article>
+              <article class="technology-card">
+                <h3>Natural products &amp; metabolomics</h3>
+                <p>
+                  I develop and apply NMR methods that shorten measurement times, increase sensitivity, resolve spectral overlap and enhance the detection of low-abundance metabolites, enabling their de novo identification or confirmation in complex biological mixtures and natural-product samples.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -754,20 +801,20 @@
           <h2>Structure, dynamics, biochemical mechanism and small-molecule discovery.</h2>
           <div class="topic-tabs" aria-label="Research themes represented in selected publications" role="list">
             <span class="topic-tab" role="listitem">Chromatin &amp; cancer</span>
-            <span class="topic-tab" role="listitem">Transcriptional regulation &amp; epigenetic enzymes</span>
-            <span class="topic-tab" role="listitem">Protein dynamics &amp; recognition</span>
-            <span class="topic-tab" role="listitem">Conformational ensembles &amp; rare states</span>
-            <span class="topic-tab" role="listitem">Protein–protein &amp; protein–nucleic acid interactions</span>
-            <span class="topic-tab" role="listitem">IDPs &amp; neurodegeneration</span>
-            <span class="topic-tab" role="listitem">Oligomerization, assembly &amp; aggregation</span>
-            <span class="topic-tab" role="listitem">Mechanism of action &amp; target validation</span>
-            <span class="topic-tab" role="listitem">Cryptic pockets &amp; ligandability</span>
-            <span class="topic-tab" role="listitem">Chemical probes &amp; drug discovery</span>
-            <span class="topic-tab" role="listitem">Fragment screening &amp; hit validation</span>
-            <span class="topic-tab" role="listitem">Structure-guided ligand design</span>
-            <span class="topic-tab" role="listitem">Dynamic structural biology</span>
+            <span class="topic-tab" role="listitem">Epigenetic enzymes</span>
+            <span class="topic-tab" role="listitem">Protein dynamics</span>
+            <span class="topic-tab" role="listitem">Molecular recognition</span>
+            <span class="topic-tab" role="listitem">IDPs &amp; aggregation</span>
+            <span class="topic-tab" role="listitem">Conformational ensembles</span>
             <span class="topic-tab" role="listitem">Biomolecular NMR</span>
-            <span class="topic-tab" role="listitem">NMR methods &amp; sensitivity</span>
+            <span class="topic-tab" role="listitem">X-ray crystallography</span>
+            <span class="topic-tab" role="listitem">Biophysical chemistry</span>
+            <span class="topic-tab" role="listitem">Ligand binding</span>
+            <span class="topic-tab" role="listitem">Cryptic pockets</span>
+            <span class="topic-tab" role="listitem">Fragment screening</span>
+            <span class="topic-tab" role="listitem">Chemical probes</span>
+            <span class="topic-tab" role="listitem">Structure-guided design</span>
+            <span class="topic-tab" role="listitem">Drug discovery</span>
             <span class="topic-tab" role="listitem">Natural products &amp; metabolomics</span>
             <span class="topic-tab" role="listitem">AI-informed structural biology</span>
           </div>
